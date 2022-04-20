@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="togglearea">
+	<label for="toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+</div>
+
+<input type="checkbox" id="toggle">
+<div class="navbar">
+	<a href="./index.html"><i class="fa fa-plus plusIcon"></i> New <i class="fa fa-angle-down"></i></a>
+	<a href="#"><i class="fa fa-upload iconColor"></i> Upload <i class="fa fa-angle-down"></i></a>
+	<a href="#"><i class="fa fa-refresh iconColor"></i> Sync</a>
+	<a href="#"><i class="fa fa-file-excel-o excelIcon"></i> Export to Excel</a>
+	<a href="#"><i class="fa fa-link iconColor"></i> Flow <i class="fa fa-angle-down"></i></a>
+	<a href="#"><i class="fa fa-ellipsis-h threedot"></i></a>
+</div>
+<div class="content">
+	@if(User.Identity.IsAuthenticated)
+{
+    <p>
+        Username: <span id='user_login'>@User.Identity.Name</span>
+    </p>
+}
+	<p class="title">Documents</p>
+	<div id="btnRow">
+		<input type="file" id="fileUpload" class="btn" multiple>
+		<button id="btnAddFile" class="btn">Add File</button>
+		<button id="btnUpdate" class="btn">Update</button>
+		<button id="btnDelete" class="btn">Delete</button>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th><i class="fa fa-file-o"></i></th>
+				<th>Name <i class="fa fa-angle-down"></i></th>
+				<th>Modified <i class="fa fa-angle-down"></i></th>
+				<th>Modified By <i class="fa fa-angle-down"></i></th>
+				<th><i class="fa fa-plus"></i> Add column</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+	<div id="overlay">
+		<div class="cv-spinner">
+			<span class="spinner"></span>
+		</div>
+	</div>
+	<!-- Modal Update -->
+	<div id="updateModal" style="text-align:center;" class="dialogHidden">
+		<label for="dataTitle">Title:</label><br />
+		<input id="dataTitle" type="text" /><br /><br/>
+		<button id="OkUpdateBtn" class="">OK</button>
+		<button id="CancelUpdateBtn" class="">Cancel</button>
+	</div>
+</div>
