@@ -1,5 +1,4 @@
-﻿using AspNet_Assignment.Models;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNet_Assignment.Controllers

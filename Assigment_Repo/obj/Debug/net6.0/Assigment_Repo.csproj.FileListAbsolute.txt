@@ -1,0 +1,14 @@
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\bin\Debug\net6.0\Assigment_Repo.deps.json
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\bin\Debug\net6.0\Assigment_Repo.runtimeconfig.json
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\bin\Debug\net6.0\Assigment_Repo.dll
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\bin\Debug\net6.0\Assigment_Repo.pdb
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.csproj.AssemblyReference.cache
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.GeneratedMSBuildEditorConfig.editorconfig
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.AssemblyInfoInputs.cache
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.AssemblyInfo.cs
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.csproj.CoreCompileInputs.cache
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.dll
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\refint\Assigment_Repo.dll
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.pdb
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\Assigment_Repo.genruntimeconfig.cache
+D:\training\Asp.netCore\AspNet_Assignment\Assigment_Repo\obj\Debug\net6.0\ref\Assigment_Repo.dll

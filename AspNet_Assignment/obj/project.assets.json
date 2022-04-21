@@ -3364,6 +3364,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Assigment_Repo/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Assigment_Repo.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assigment_Repo.dll": {}
+        }
       }
     }
   },
@@ -10307,10 +10320,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Assigment_Repo/1.0.0": {
+      "type": "project",
+      "path": "../Assigment_Repo/Assigment_Repo.csproj",
+      "msbuildProject": "../Assigment_Repo/Assigment_Repo.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Assigment_Repo >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
@@ -10345,7 +10364,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj": {
+              "projectPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

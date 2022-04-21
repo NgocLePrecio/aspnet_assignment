@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AspNet_Assignment;
-using AspNet_Assignment.Models;
+using Assigment_Repo.Models;
 using Microsoft.AspNetCore.Authorization;
+using Assigment_Repo.Abstract;
 
 namespace AspNet_Assignment.Controllers
 {
@@ -17,25 +18,26 @@ namespace AspNet_Assignment.Controllers
     [Authorize]
     public class FileUploadedController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly IFileRepository repository;
 
-        public FileUploadedController(DataContext context)
+        public FileUploadedController(IFileRepository repo)
         {
-            _context = context;
+            repository = repo;
         }
 
         // GET: FileUploaded
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<FileUploaded>>> GetFileUploaded()
+        public async Task<IEnumerable<FileUploaded>> GetFileUploaded()
         {
-            return await _context.FileUploaded.ToListAsync();
+            //return await _context.FileUploaded.ToListAsync();
+            return await repository.GetAllFiles();
         }
 
         //GET: FileUploaded/5
         [HttpGet("{id}")]
         public async Task<ActionResult<FileUploaded>> GetFileUploaded(int id)
         {
-            var fileUploaded = await _context.FileUploaded.FindAsync(id);
+            var fileUploaded = await repository.GetFileById(id);
 
             if (fileUploaded == null)
             {
@@ -67,44 +69,25 @@ namespace AspNet_Assignment.Controllers
                 lst.Add(fileUploaded);
             }
 
-            _context.FileUploaded.AddRange(lst);
-            await _context.SaveChangesAsync();
+            await repository.SaveFiles(lst);
 
             return CreatedAtAction("GetFileUploaded", lst);
 
         }
 
+        // PUT: FileUploaded/5
         [HttpPut("{id}")]
         public async Task<ActionResult<FileUploaded>> PutFileUploaded(int id, [FromForm(Name = "fileName")] string fileName, [FromForm(Name = "createdBy")] string createdBy)
-        { 
-            var request = HttpContext.Request;
-            
+        {             
             if (fileName == null || fileName == "")
             {
                 return BadRequest();
             }
             DateTime today = DateTime.Now;
-            var fileUpload = await _context.FileUploaded.SingleOrDefaultAsync(f => f.FileId == id);
-
-            fileUpload.FileName = fileName;
-            fileUpload.CreatedAt = today.Day.ToString() + '/' + today.Month.ToString();
-            fileUpload.CreatedBy = createdBy;
-
-
-            try
+            FileUploaded fileUpload = await repository.UpdateFile(id,fileName,createdBy);
+            if (fileUpload == null)
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FileUploadedExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound();
             }
 
             return fileUpload;
@@ -114,22 +97,12 @@ namespace AspNet_Assignment.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFileUploaded(int id)
         {
-            var fileUpload = await _context.FileUploaded.FindAsync(id);
-            if (fileUpload == null)
-            {
-                return NotFound();
-            }
-
-            _context.FileUploaded.Remove(fileUpload);
-            await _context.SaveChangesAsync();
+            await repository.DeleteFile(id);
 
             return NoContent();
         }
 
-        private bool FileUploadedExists(int id)
-        {
-            return _context.FileUploaded.Any(e => e.FileId == id);
-        }
+        
 
     }
 }
