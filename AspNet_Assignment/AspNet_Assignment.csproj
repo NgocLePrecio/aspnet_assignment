@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Assigment_Repo\Assigment_Repo.csproj" />
+    <ProjectReference Include="..\Assignment_Service\Assignment_Service.csproj" />
   </ItemGroup>
 
 </Project>

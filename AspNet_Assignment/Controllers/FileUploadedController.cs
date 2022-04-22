@@ -10,6 +10,7 @@ using AspNet_Assignment;
 using Assigment_Repo.Models;
 using Microsoft.AspNetCore.Authorization;
 using Assigment_Repo.Abstract;
+using Assignment_Service.FileUploadService;
 
 namespace AspNet_Assignment.Controllers
 {
@@ -18,9 +19,9 @@ namespace AspNet_Assignment.Controllers
     [Authorize]
     public class FileUploadedController : ControllerBase
     {
-        private readonly IFileRepository repository;
+        private readonly FileUploadService repository;
 
-        public FileUploadedController(IFileRepository repo)
+        public FileUploadedController(FileUploadService repo)
         {
             repository = repo;
         }

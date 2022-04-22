@@ -279,3 +279,5 @@ D:\training\Asp.netCore\AspNet_Assignment\AspNet_Assignment\obj\Debug\net6.0\ref
 D:\training\Asp.netCore\AspNet_Assignment\AspNet_Assignment\obj\Debug\net6.0\AspNet_Assignment.pdb
 D:\training\Asp.netCore\AspNet_Assignment\AspNet_Assignment\obj\Debug\net6.0\AspNet_Assignment.genruntimeconfig.cache
 D:\training\Asp.netCore\AspNet_Assignment\AspNet_Assignment\obj\Debug\net6.0\ref\AspNet_Assignment.dll
+D:\training\Asp.netCore\AspNet_Assignment\AspNet_Assignment\bin\Debug\net6.0\Assignment_Service.dll
+D:\training\Asp.netCore\AspNet_Assignment\AspNet_Assignment\bin\Debug\net6.0\Assignment_Service.pdb

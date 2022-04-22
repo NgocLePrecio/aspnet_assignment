@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Assigment_Repo.Data;
 using Assigment_Repo.Abstract;
 using Assigment_Repo.Concrete;
+using Assignment_Service.FileUploadService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext") ?? throw new InvalidOperationException("Connection string 'DataContext' not found.")));
 
 builder.Services.AddScoped<IFileRepository,EFcoreFileRepository>();
+builder.Services.AddScoped<FileUploadService, FileUploadService>();
 
 // Azure AD Config
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)

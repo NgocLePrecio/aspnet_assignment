@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\Assignment_Service.csproj": {}
+  },
+  "projects": {
+    "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj",
+        "projectName": "Assigment_Repo",
+        "projectPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj",
+        "packagesPath": "C:\\Users\\leng\\.nuget\\packages\\",
+        "outputPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\leng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\Assignment_Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\Assignment_Service.csproj",
+        "projectName": "Assignment_Service",
+        "projectPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\Assignment_Service.csproj",
+        "packagesPath": "C:\\Users\\leng\\.nuget\\packages\\",
+        "outputPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\leng\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj": {
+                "projectPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

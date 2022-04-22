@@ -3377,6 +3377,19 @@
         "runtime": {
           "bin/placeholder/Assigment_Repo.dll": {}
         }
+      },
+      "Assignment_Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Assigment_Repo": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Assignment_Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assignment_Service.dll": {}
+        }
       }
     }
   },
@@ -10325,11 +10338,17 @@
       "type": "project",
       "path": "../Assigment_Repo/Assigment_Repo.csproj",
       "msbuildProject": "../Assigment_Repo/Assigment_Repo.csproj"
+    },
+    "Assignment_Service/1.0.0": {
+      "type": "project",
+      "path": "../Assignment_Service/Assignment_Service.csproj",
+      "msbuildProject": "../Assignment_Service/Assignment_Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Assigment_Repo >= 1.0.0",
+      "Assignment_Service >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
@@ -10367,6 +10386,9 @@
           "projectReferences": {
             "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj": {
               "projectPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assigment_Repo\\Assigment_Repo.csproj"
+            },
+            "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\Assignment_Service.csproj": {
+              "projectPath": "D:\\training\\Asp.netCore\\AspNet_Assignment\\Assignment_Service\\Assignment_Service.csproj"
             }
           }
         }

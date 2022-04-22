@@ -1,4 +1,5 @@
-﻿using Assigment_Repo.Models;
+﻿#nullable disable
+using Assigment_Repo.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
