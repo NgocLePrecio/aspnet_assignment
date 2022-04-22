@@ -19,11 +19,11 @@ namespace AspNet_Assignment.Controllers
     [Authorize]
     public class FileUploadedController : ControllerBase
     {
-        private readonly FileUploadService repository;
+        private readonly FileUploadService fileService;
 
         public FileUploadedController(FileUploadService repo)
         {
-            repository = repo;
+            fileService = repo;
         }
 
         // GET: FileUploaded
@@ -31,14 +31,14 @@ namespace AspNet_Assignment.Controllers
         public async Task<IEnumerable<FileUploaded>> GetFileUploaded()
         {
             //return await _context.FileUploaded.ToListAsync();
-            return await repository.GetAllFiles();
+            return await fileService.GetAllFiles();
         }
 
         //GET: FileUploaded/5
         [HttpGet("{id}")]
         public async Task<ActionResult<FileUploaded>> GetFileUploaded(int id)
         {
-            var fileUploaded = await repository.GetFileById(id);
+            var fileUploaded = await fileService.GetFileById(id);
 
             if (fileUploaded == null)
             {
@@ -70,8 +70,7 @@ namespace AspNet_Assignment.Controllers
                 lst.Add(fileUploaded);
             }
 
-            await repository.SaveFiles(lst);
-
+            await fileService.SaveFiles(lst);
             return CreatedAtAction("GetFileUploaded", lst);
 
         }
@@ -85,7 +84,7 @@ namespace AspNet_Assignment.Controllers
                 return BadRequest();
             }
             DateTime today = DateTime.Now;
-            FileUploaded fileUpload = await repository.UpdateFile(id,fileName,createdBy);
+            FileUploaded fileUpload = await fileService.UpdateFile(id,fileName,createdBy);
             if (fileUpload == null)
             {
                 return NotFound();
@@ -98,7 +97,7 @@ namespace AspNet_Assignment.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFileUploaded(int id)
         {
-            await repository.DeleteFile(id);
+            await fileService.DeleteFile(id);
 
             return NoContent();
         }
